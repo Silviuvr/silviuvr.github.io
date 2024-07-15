@@ -1,0 +1,10 @@
+baseURL = 'https://vspdigital.github.io/'
+languageCode = 'en-us'
+theme = "anatole"
+enableEmoji = true
+
+[params]
+title = 'Vranau Silviu'
+author = "Silviu Vranau"
+description = "iOS Mobile developer"
+
