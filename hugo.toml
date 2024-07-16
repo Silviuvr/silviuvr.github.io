@@ -4,8 +4,28 @@ theme = "anatole"
 enableEmoji = true
 
 [params]
-title = 'Vranau Silviuuu'
+title = 'Silviu Vranau'
 author = "Silviu Vranau"
-description = "iOS Mobile developerrrr"
-profilePicture = "images/test.jpg"
+description = "iOS Developer | SwiftUI | Swift | Freelancer"
+profilePicture = "profileImage.jpeg"
 
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Blog"
+  weight = 200
+  identifier = "blog"
+  url = "/post/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
