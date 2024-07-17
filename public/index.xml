@@ -5,6 +5,29 @@
     <link>http://localhost:1313/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jul 2024 19:17:38 +0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Tue, 16 Jul 2024 19:17:38 +0300</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      
+        <description>Hi, I&amp;rsquo;m Silviu Vranau, an iOS Developer specializing in SwiftUI and Swift. I am a freelancer with a passion for creating innovative and efficient solutions for mobile applications.</description>
+      
+    </item>
+    
+    <item>
+      <title>My First Blog</title>
+      <link>http://localhost:1313/blog/my-first-blog/</link>
+      <pubDate>Tue, 16 Jul 2024 19:00:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/my-first-blog/</guid>
+      
+        <description>Hello world! &amp;#x1f30d;</description>
+      
+    </item>
+    
   </channel>
 </rss>
