@@ -8,9 +8,15 @@ title = 'Silviu Vranau'
 author = "Silviu Vranau"
 description = "iOS Developer | SwiftUI | Swift | Freelancer"
 profilePicture = "images/profileImage.jpeg"
-mainSections = ["blog", "about"]
+mainSections = ["blog"]
+readMore = true
+contentratio = 0.75
+doNotLoadAnimations = true
+## hidesidebar = true
+contactFormAction = "https://formspree.io/f/mblrdjlw"
 
 [menu]
+
 
   [[menu.main]]
   name = "Home"
@@ -18,18 +24,32 @@ mainSections = ["blog", "about"]
   weight = 100
   url = "/"
 
+
   [[menu.main]]
   name = "Blog"
   weight = 200
   identifier = "blog"
   url = "/blog/"
 
+ 
   [[menu.main]]
-  name = "About"
+  name = "Portfolio"
   weight = 300
+  identifier = "portfolio"
+  url = "/portfolio/"
+
+ [[menu.main]]
+  name = "About"
+  weight = 400
   identifier = "about"
   url = "/about/"
 
+
+ [[menu.main]]
+  name = "Contact"
+  weight = 600
+  identifier = "contact"
+  url = "/contact/"
 
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.

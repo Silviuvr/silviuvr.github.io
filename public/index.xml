@@ -14,7 +14,8 @@
       
       <guid>http://localhost:1313/about/</guid>
       
-        <description>Hi, I&amp;rsquo;m Silviu Vranau, an iOS Developer specializing in SwiftUI and Swift. I am a freelancer with a passion for creating innovative and efficient solutions for mobile applications.</description>
+        <description>👋 Hi, I&amp;rsquo;m Silviu Vranau, an iOS mobile app developer specializing in SwiftUI and Swift. I also have experience working with Flutter. 🎓 Between 2017 and 2023, I completed both my undergraduate and master’s studies, earning a B.S. and an M.S. in Computer Science. These degrees have equipped me with a solid foundation in software development.
+💡 I am passionate about creating innovative and efficient solutions for mobile applications, always striving to push the boundaries of what’s possible.</description>
       
     </item>
     
@@ -26,6 +27,18 @@
       <guid>http://localhost:1313/blog/my-first-blog/</guid>
       
         <description>Hello world! &amp;#x1f30d;</description>
+      
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/contact/</guid>
+      
+        <description>💬 Feel free to reach out to me by filling out the form below.
+Let&amp;rsquo;s connect! 🚀</description>
       
     </item>
     
