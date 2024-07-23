@@ -19,6 +19,18 @@
     </item>
     
     <item>
+      <title>SwifUI Multiline Text with an INLINE image at the end</title>
+      <link>http://localhost:1313/blog/multiline-text/</link>
+      <pubDate>Thu, 16 Nov 2023 19:00:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/multiline-text/</guid>
+      
+        <description>. . .
+The problem I haven’t been able to resolve is how to display an asset image alongside text on its right side.</description>
+      
+    </item>
+    
+    <item>
       <title>How to take a screenshot/snapshot of a Scroll View in SwiftUI.</title>
       <link>http://localhost:1313/blog/screenshot-in-swiftui/</link>
       <pubDate>Wed, 11 Oct 2023 19:00:11 +0300</pubDate>

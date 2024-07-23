@@ -4,8 +4,6 @@ date = 2023-10-11T19:00:11+03:00
 draft = false
 +++
 
-<link rel="stylesheet" href="/css/custom-highlight.css">
-
 Capturing a long screenshot of a `ScrollView` in SwiftUI can be challenging, but it's quite feasible with the right approach.\
 \
 In our case, capturing a screenshot of a scroll view that extends **beyond** the visible area of the screen requires several steps.
