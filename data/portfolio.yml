@@ -1,32 +1,114 @@
 portfolioitems:
   # portfolio category
-  - title: Coding Projects
-    description: "All my coding projects"
+  - title: Work Experience
+
     portfolioitem:
-      - name: Project 1
-        link: https://google.com/
-        linktext: "Visit project website"
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      - name: Emerson
+        # image: '/images/portfolio/project1.jpg'
+        link: https://apps.apple.com/us/app/ridgid-link/id1278220445
+        linktext: "App Store Link"
+        description: "
+        - Worked on the development of iOS applications for construction and plumbing smart tools controlled via Bluetooth
+
+
+        - Improved the functionality of an existing project through integration of SwiftUI
+
+        - Software stack used: Swift, SwiftUI, Minimum ObjC, Github, Firebase, Xcode, Sketch, and Azure DevOps
+
+        - Focused primarily on RIDGID Link and RIDGID Connect, and successfully refactored several minor applications"
         tags:
-          - Tag 1
-          - Tag 2
+          - Swift
+          - SwiftUI
+          - Minimum ObjC
+          - MVVM
+          - UIKit
+          - Github
+          - Firebase
+          - Xcode
+          - Sketch
+          - Azure DevOps
+        status: "Ongoing"
+        start: "2021"
+        end: "Present"
+        authors:
+          - RIDGIDLink
+
+      - name: Stentless
+        description: "
+As the sole iOS developer for the Stentless project, I played a pivotal role in creating an innovative mobile app designed to assist urologists in managing their patients' care. I collaborated closely with the client, engaging in multiple meetings to bring their vision to life and ensure a seamless UI/UX flow. 
+The final project was released to App Store as an Unlisted Application due to privacy reasons.
+
+
+In addition to my responsibilities as the iOS developer, I also provided valuable support to the Android development team, aiding them in getting the project off the ground.
+        "
+        status: "Finished"
+        start: "Feb 2023"
+        end: "May 2023"
+        tags:
+          - Swift
+          - SwiftUI
+          - Combine
+          - Firestore
+          - Firebase
+          - Firebase Authentication
+          - Xcode
+          - MVVM
+          - Figma
+      - name: 3Pillar Global
+        description: "
+        - Developed and maintained an iOS application for a top assurance company in the US
+        
+        - Actively participated in agile programming processes including standup, backlog grooming, and planning meetings
+        
+
+        - Worked to resolve bugs and implement new features in a fast-paced environment
+        "
         status: "Finished"
         start: "2020"
         end: "2021"
-        authors:
-          - lxndrblz
-          - alexanderdavide
-      - name: Project 2
-        link: https://google.com/
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        status: "On Hold"
         tags:
-          - Tag 1
-          - Tag 2
-      - name: Project 3
-        link: https://google.com/
+          - Swift
+          - Bitbucket
+          - Charles Proxy
+          - Firebase
+          - Xcode
+          - Sourcetree
+          - AbstractApp
+          - InvisionApp
+
+      - name: Dynamic Market
+        description: "
+        As a volunteer iOS app developer for the Dynamic Market app, I contributed to the development of the app using SwiftUI. The app was designed to connect local fruits and vegetables distributors with ordinary people, while also enabling users to find fresh, organic produce directly from the app. 
+        
+
+        Through my contributions, the Dynamic Market app became a valuable tool for both small business owners and consumers alike.
+        "
         status: "Finished"
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        start: "Jan 2022"
+        end: "Jun 2022"
         tags:
-          - Tag 1
-          - Tag 2
+          - Swift
+          - SwiftUI
+          - Trello
+      - name: Endava (iOS intern)
+        status: "Finished"
+        description: "The primary objective of the application was to track all events that could occur within the company. The app allowed users to view all available events, and if interested, they could add the events to their favorites. Additionally, the application could fetch all developers from a specific department, along with their skills. When a user logged in, they could access a FAQ table view with answers to common questions employees might have. Finally, the app included a profile page that displayed all of a user's skills and details."
+        tags:
+          - Swift
+          - Xcode
+          - Sourcetree
+          - Github
+          - UIKit
+          - MVP
+        start: "Sep 2019"
+        end: "Nov 2019"
+        
+      - name: MSG Systems (full stack intern)
+        status: "Finished"
+        tags:
+          - Java EE
+          - JavaScript
+          - HTML
+          - CSS        
+        start: "Jul 2019"
+        end: "Sep 2019"

@@ -1,7 +1,16 @@
 baseURL = 'https://silviuvr.github.io/'
 languageCode = 'en-us'
+DefaultContentLanguage = "en"
 theme = "anatole"
+summaryLength = 10
 enableEmoji = true
+
+
+
+# Syntax highlighting
+PygmentsCodeFences = true
+PygmentsStyle = "vulcan"
+pygmentsUseClasses = false
 
 [params]
 title = 'Silviu Vranau'
@@ -11,9 +20,12 @@ profilePicture = "images/profileImage.jpeg"
 mainSections = ["blog"]
 readMore = true
 contentratio = 0.75
+copyright = "Silviu Vranau, 2019-{{ YEAR }}"
 doNotLoadAnimations = true
 ## hidesidebar = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
+
+
 
 [menu]
 
@@ -38,9 +50,15 @@ contactFormAction = "https://formspree.io/f/mblrdjlw"
   identifier = "portfolio"
   url = "/portfolio/"
 
+  [[menu.main]]
+  name = "Reviews"
+  weight = 400
+  identifier = "reviews"
+  url = "/reviews/"
+
  [[menu.main]]
   name = "About"
-  weight = 400
+  weight = 500
   identifier = "about"
   url = "/about/"
 
@@ -68,3 +86,10 @@ url = "mailto:vr.silviu@gmail.com"
 icon = "fab fa-linkedin"
 title = "LinkedIn"
 url = "https://www.linkedin.com/in/silviu-vranau/"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      
