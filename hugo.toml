@@ -1,10 +1,11 @@
 baseURL = 'https://silviuvr.github.io/'
 languageCode = 'en-us'
-DefaultContentLanguage = "en"
+languageName = 'English'
 theme = "anatole"
 summaryLength = 10
 enableEmoji = true
 enableInlineShortcodes = true
+enableRobotsTXT = true
 
 [params]
 title = 'Silviu Vranau'
@@ -19,6 +20,9 @@ doNotLoadAnimations = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
 customCss = ["css/styles.css"]
 customJs = ["js/custom.js"]
+favicon = "favicons/"
+
+
 [menu]
   [[menu.main]]
   name = "Home"
