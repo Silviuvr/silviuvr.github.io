@@ -70,15 +70,15 @@ HStack {
 I will declare some constants in order to avoid repetition:
 
 ```swift
- private var text = "This is a multi-line text. It has multiple lines. It has multiple lines. It has multiple lines. It has multiple lines. "
- private var image = "info" // Replace with your image name
- private let font: Font = .system(size: 17) // Same size as the image frame
+private var text = "This is a multi-line text. It has multiple lines. It has multiple lines. It has multiple lines. It has multiple lines. "
+private var image = "info" // Replace with your image name
+private let font: Font = .system(size: 17) // Same size as the image frame
     
-  var body: some View {
-      Text(text)
-        .font(font)
-      + Text("\(getCustomImage())")
-  }
+var body: some View {
+  Text(text)
+    .font(font)
+  + Text("\(getCustomImage())")
+}
 ```
 \
 We use the method with the `Text` initializer, but we adapt it.
@@ -116,11 +116,10 @@ And last but not least here’s the `convertImageToNewFrame()` function:
 
 ```swift
 func convertImageToNewFrame(image: UIImage, newFrameSize: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(newFrameSize, false, 0.0)
-        image.draw(in: CGRect(origin: .zero, size: newFrameSize))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
+    UIGraphicsBeginImageContextWithOptions(newFrameSize, false, 0.0)
+    image.draw(in: CGRect(origin: .zero, size: newFrameSize))        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return newImage
 }
 
 ```
