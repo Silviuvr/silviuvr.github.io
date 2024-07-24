@@ -5,9 +5,6 @@ theme = "anatole"
 summaryLength = 10
 enableEmoji = true
 
-pygmentsUseClasses = true
-pygmentsCodefences = true
-
 [params]
 title = 'Silviu Vranau'
 author = "Silviu Vranau"
@@ -20,7 +17,6 @@ copyright = "Silviu Vranau, 2019-{{ YEAR }}"
 doNotLoadAnimations = true
 ## hidesidebar = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
-customCss = ["css/syntax.css"]
 
 
 [menu]
@@ -85,16 +81,6 @@ url = "https://www.linkedin.com/in/silviu-vranau/"
 
 
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    tabWidth = 4
-    noClasses = false
-
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
