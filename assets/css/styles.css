@@ -1,0 +1,8 @@
+body {
+  max-width: 75rem;
+  line-height: 1.5;
+}
+
+div.highlight {
+  min-width: 85rem;
+}

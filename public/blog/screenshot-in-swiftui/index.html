@@ -46,6 +46,16 @@
     type="text/css"
   />
   
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/styles.min.63db95d176e3bac87158b26d153c0d73ce1df687ec8d12184087a5997e013b7e.css"
+      integrity="sha256-Y9uV0XbjushxWLJtFTwNc84d9ofsjRIYQIelmX4BO34="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
   
   <link
     rel="stylesheet"
@@ -435,67 +445,67 @@ In our case, capturing a screenshot of a scroll view that extends <strong>beyond
 </figure>
 
 <h3 id="lets-start-with-the-ui">Let’s start with the UI:</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> body: some View {
-</span></span><span style="display:flex;"><span>  ZStack {
-</span></span><span style="display:flex;"><span>    Color.teal.edgesIgnoringSafeArea(.all)
-</span></span><span style="display:flex;"><span>    ScrollView(showsIndicators: <span style="color:#66d9ef">false</span>) {
-</span></span><span style="display:flex;"><span>      scrollContent
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ZStack</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Color</span><span class="p">.</span><span class="n">teal</span><span class="p">.</span><span class="n">edgesIgnoringSafeArea</span><span class="p">(.</span><span class="n">all</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ScrollView</span><span class="p">(</span><span class="n">showsIndicators</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">scrollContent</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p><br>
 In this article, we&rsquo;ll use some system images and a button placed inside the scroll view <strong>(<code>scrollContent</code>)</strong>. The button will let us capture an image and open an activity controller, allowing us to save the image locally.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> scrollContent: some View {
-</span></span><span style="display:flex;"><span>  VStack(spacing: <span style="color:#ae81ff">10</span>) {
-</span></span><span style="display:flex;"><span>    Button(<span style="color:#e6db74">&#34;Share&#34;</span>) {
-</span></span><span style="display:flex;"><span>      shareImage()
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    .padding(.top, <span style="color:#ae81ff">40</span>)
-</span></span><span style="display:flex;"><span>    ForEach(<span style="color:#ae81ff">0.</span>.&lt;<span style="color:#ae81ff">3</span>) { <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">in</span>
-</span></span><span style="display:flex;"><span>      Image(systemName: <span style="color:#e6db74">&#34;heart&#34;</span>)
-</span></span><span style="display:flex;"><span>        .resizable()
-</span></span><span style="display:flex;"><span>        .scaledToFit()
-</span></span><span style="display:flex;"><span>        .frame(width: <span style="color:#ae81ff">200</span>, height: <span style="color:#ae81ff">300</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    Image(systemName: <span style="color:#e6db74">&#34;person&#34;</span>)
-</span></span><span style="display:flex;"><span>      .resizable()
-</span></span><span style="display:flex;"><span>      .scaledToFit()
-</span></span><span style="display:flex;"><span>      .frame(width: <span style="color:#ae81ff">200</span>, height: <span style="color:#ae81ff">300</span>)
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">var</span> <span class="nv">scrollContent</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">VStack</span><span class="p">(</span><span class="n">spacing</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Button</span><span class="p">(</span><span class="s">&#34;Share&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">shareImage</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">padding</span><span class="p">(.</span><span class="n">top</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ForEach</span><span class="p">(</span><span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">3</span><span class="p">)</span> <span class="p">{</span> <span class="kc">_</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">      <span class="n">Image</span><span class="p">(</span><span class="n">systemName</span><span class="p">:</span> <span class="s">&#34;heart&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">resizable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">scaledToFit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Image</span><span class="p">(</span><span class="n">systemName</span><span class="p">:</span> <span class="s">&#34;person&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="n">resizable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="n">scaledToFit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p><br>
 The <strong><code>shareImage()</code></strong> function captures an image and attaches it to an <strong><code>UIActivityViewController</code></strong> and presents it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">shareImage</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> screenshotImage = scrollContent.snapshot() <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> activityController = UIActivityViewController(
-</span></span><span style="display:flex;"><span>        activityItems: [screenshotImage], applicationActivities: <span style="color:#66d9ef">nil</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> vc = UIApplication.shared.windows.first!.rootViewController
-</span></span><span style="display:flex;"><span>    vc?.present(activityController, animated: <span style="color:#66d9ef">true</span>)
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">func</span> <span class="nf">shareImage</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">screenshotImage</span> <span class="p">=</span> <span class="n">scrollContent</span><span class="p">.</span><span class="n">snapshot</span><span class="p">()</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">activityController</span> <span class="p">=</span> <span class="n">UIActivityViewController</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">activityItems</span><span class="p">:</span> <span class="p">[</span><span class="n">screenshotImage</span><span class="p">],</span> <span class="n">applicationActivities</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">vc</span> <span class="p">=</span> <span class="n">UIApplication</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">windows</span><span class="p">.</span><span class="bp">first</span><span class="p">!.</span><span class="n">rootViewController</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vc</span><span class="p">?.</span><span class="n">present</span><span class="p">(</span><span class="n">activityController</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>In the code above, we capture an image by calling the <strong>snapshot()</strong> function on the <strong>scrollContent</strong> variable. To enable this, we declared <strong>scrollContent</strong> as a variable outside of the <strong>body</strong>.</p>
 <p>Here is the <strong>snapshot</strong> function as a <strong>UIView</strong> extension:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">View</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">snapshot</span>() -&gt; UIImage? {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> controller = UIHostingController(
-</span></span><span style="display:flex;"><span>            rootView: <span style="color:#66d9ef">self</span>.ignoresSafeArea().fixedSize(horizontal: <span style="color:#66d9ef">true</span>, vertical: <span style="color:#66d9ef">true</span>))
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> view = controller.view <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span> }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> targetSize = view.intrinsicContentSize <span style="color:#75715e">// to capture entire scroll content</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> targetSize.width <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> targetSize.height <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span> }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        view.bounds = CGRect(origin: .zero, size: targetSize)
-</span></span><span style="display:flex;"><span>        view.backgroundColor = .systemTeal <span style="color:#75715e">// set it to clear if no background color is preffered</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> renderer = UIGraphicsImageRenderer(size: targetSize)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> renderer.image { rendereContext <span style="color:#66d9ef">in</span>
-</span></span><span style="display:flex;"><span>            view.drawHierarchy(<span style="color:#66d9ef">in</span>: controller.view.bounds, afterScreenUpdates: <span style="color:#66d9ef">true</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">snapshot</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">UIImage</span><span class="p">?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">controller</span> <span class="p">=</span> <span class="n">UIHostingController</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rootView</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">ignoresSafeArea</span><span class="p">().</span><span class="n">fixedSize</span><span class="p">(</span><span class="n">horizontal</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">vertical</span><span class="p">:</span> <span class="kc">true</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="kd">let</span> <span class="nv">view</span> <span class="p">=</span> <span class="n">controller</span><span class="p">.</span><span class="n">view</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">targetSize</span> <span class="p">=</span> <span class="n">view</span><span class="p">.</span><span class="n">intrinsicContentSize</span> <span class="c1">// to capture entire scroll content</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">targetSize</span><span class="p">.</span><span class="n">width</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">targetSize</span><span class="p">.</span><span class="n">height</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">view</span><span class="p">.</span><span class="n">bounds</span> <span class="p">=</span> <span class="n">CGRect</span><span class="p">(</span><span class="n">origin</span><span class="p">:</span> <span class="p">.</span><span class="n">zero</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">targetSize</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">view</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="p">=</span> <span class="p">.</span><span class="n">systemTeal</span> <span class="c1">// set it to clear if no background color is preffered</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">renderer</span> <span class="p">=</span> <span class="n">UIGraphicsImageRenderer</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="n">targetSize</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">renderer</span><span class="p">.</span><span class="n">image</span> <span class="p">{</span> <span class="n">rendereContext</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">            <span class="n">view</span><span class="p">.</span><span class="n">drawHierarchy</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="n">controller</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">,</span> <span class="n">afterScreenUpdates</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p><br>
 <br></p>
 <h3 id="this-is-what-happens">This is what happens:</h3>
