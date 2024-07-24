@@ -4,6 +4,7 @@ DefaultContentLanguage = "en"
 theme = "anatole"
 summaryLength = 10
 enableEmoji = true
+enableInlineShortcodes = true
 
 [params]
 title = 'Silviu Vranau'
@@ -16,8 +17,7 @@ contentratio = 0.75
 copyright = "Silviu Vranau, 2019-{{ YEAR }}"
 doNotLoadAnimations = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
-disableHLJS = true
-
+customCss = ["css/styles.css"]
 [menu]
   [[menu.main]]
   name = "Home"
@@ -81,3 +81,7 @@ url = "https://www.linkedin.com/in/silviu-vranau/"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    lineNos = false
+    codeFences = true
+    noClasses = false
