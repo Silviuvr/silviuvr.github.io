@@ -1,0 +1,1 @@
+function addHeaderToCodeBlocks(){const e=document.querySelectorAll("pre");e.forEach(e=>{const t=document.createElement("div");t.className="code-header";const n=e.className.replace("language-","");t.textContent=`Code Block: ${n}`,e.parentNode.insertBefore(t,e)})}document.addEventListener("DOMContentLoaded",addHeaderToCodeBlocks)
