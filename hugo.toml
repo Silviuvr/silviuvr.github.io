@@ -18,6 +18,7 @@ copyright = "Silviu Vranau, 2019-{{ YEAR }}"
 doNotLoadAnimations = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
 customCss = ["css/styles.css"]
+customJs = ["js/custom.js"]
 [menu]
   [[menu.main]]
   name = "Home"
