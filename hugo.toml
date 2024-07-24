@@ -17,7 +17,7 @@ copyright = "Silviu Vranau, 2019-{{ YEAR }}"
 doNotLoadAnimations = true
 ## hidesidebar = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
-
+disableHLJS = true
 
 [menu]
 
