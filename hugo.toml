@@ -8,6 +8,7 @@ enableInlineShortcodes = true
 enableRobotsTXT = true
 
 [params]
+googleSiteVerify = "e8sapNWOMkccQERqMGL6YoGbL60PNjgYxsYTGy70MkU"
 title = 'Silviu Vranau'
 author = "Silviu Vranau"
 description = "iOS Developer | SwiftUI | Swift | Freelancer"
