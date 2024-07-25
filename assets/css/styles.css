@@ -5,6 +5,42 @@ code {
   -webkit-text-size-adjust: 100%;
 }
 
+.theme--dark .post__content .chroma  {
+  background-color: #25262c;
+}
+
+.theme--dark .code-header {
+  background-color: #292f36;
+}
+
+.theme--dark .chroma .n {
+  color: #dabaff;
+}
+
+.theme--dark .chroma .s {
+  color: #d56f63
+}
+
+.theme--dark .bp {
+  color: #af7fe7
+}
+
+.theme--dark .kd {
+  color: #ff7ab2
+}
+
+.theme--dark .nc  {
+  color: #4eb0cc
+}
+
+.theme--dark .nf  {
+  color: #4eb0cc
+}
+
+.theme--dark .c1  {
+  color: #878787
+}
+
 .code-header {
   display: flex;
   justify-content: space-between;

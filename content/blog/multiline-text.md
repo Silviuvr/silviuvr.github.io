@@ -1,5 +1,5 @@
 +++
-title = 'SwifUI Multiline Text with an INLINE image at the end'
+title = 'SwiftUI Multiline Text with an INLINE image at the end'
 date = 2023-11-16T19:00:11+03:00
 draft = false
 +++

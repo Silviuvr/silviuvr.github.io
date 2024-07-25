@@ -7,6 +7,10 @@ enableEmoji = true
 enableInlineShortcodes = true
 enableRobotsTXT = true
 
+pygmentsUseClasses = true   
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
 [params]
 googleSiteVerify = "Q4oxgBC4BdG-kp2tG9zWZ7HQ0TGNbjNUrzIDWFeRhP4"
 title = 'Silviu Vranau'
@@ -87,7 +91,3 @@ url = "https://www.linkedin.com/in/silviu-vranau/"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.highlight]
-    lineNos = false
-    codeFences = true
-    noClasses = false
