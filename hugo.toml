@@ -1,0 +1,93 @@
+baseURL = 'https://silviuvr.github.io/'
+languageCode = 'en-us'
+languageName = 'English'
+theme = "anatole"
+summaryLength = 10
+enableEmoji = true
+enableInlineShortcodes = true
+enableRobotsTXT = true
+
+[params]
+googleSiteVerify = "Q4oxgBC4BdG-kp2tG9zWZ7HQ0TGNbjNUrzIDWFeRhP4"
+title = 'Silviu Vranau'
+author = "Silviu Vranau"
+description = "iOS Developer | SwiftUI | Swift | Freelancer"
+profilePicture = "images/profileImage.jpeg"
+mainSections = ["blog"]
+readMore = true
+contentratio = 0.75
+copyright = "Silviu Vranau, 2019-{{ YEAR }}"
+doNotLoadAnimations = true
+contactFormAction = "https://formspree.io/f/mblrdjlw"
+customCss = ["css/styles.css"]
+customJs = ["js/custom.js"]
+favicon = "favicons/"
+
+
+[menu]
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+
+  [[menu.main]]
+  name = "Blog"
+  weight = 200
+  identifier = "blog"
+  url = "/blog/"
+
+ 
+  [[menu.main]]
+  name = "Portfolio"
+  weight = 300
+  identifier = "portfolio"
+  url = "/portfolio/"
+
+  [[menu.main]]
+  name = "Reviews"
+  weight = 400
+  identifier = "reviews"
+  url = "/reviews/"
+
+ [[menu.main]]
+  name = "About"
+  weight = 500
+  identifier = "about"
+  url = "/about/"
+
+
+ [[menu.main]]
+  name = "Contact"
+  weight = 600
+  identifier = "contact"
+  url = "/contact/"
+
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/Silviuvr"
+
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:vr.silviu@gmail.com"
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/silviu-vranau/"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = false
+    codeFences = true
+    noClasses = false
