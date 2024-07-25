@@ -6,7 +6,18 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jul 2024 19:17:38 +0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Jul 2024 19:00:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Horizontally Align Images with Dynamic Text Views in a VStack in SwiftUI 🚧 </title>
+      <link>http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/</link>
+      <pubDate>Wed, 24 Jul 2024 19:00:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/</guid>
+      
+        <description>The Problem 😓: I encountered an unusual situation where I needed to place an Image next to my Text.</description>
+      
+    </item>
+    
     <item>
       <title>About me</title>
       <link>http://localhost:1313/about/</link>
@@ -19,7 +30,7 @@
     </item>
     
     <item>
-      <title>SwifUI Multiline Text with an INLINE image at the end</title>
+      <title>SwiftUI Multiline Text with an INLINE image at the end</title>
       <link>http://localhost:1313/blog/multiline-text/</link>
       <pubDate>Thu, 16 Nov 2023 19:00:11 +0300</pubDate>
       

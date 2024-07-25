@@ -3,13 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-16T19:17:38+03:00</lastmod>
+    <lastmod>2024-07-24T19:00:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2024-07-24T19:00:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/</loc>
+    <lastmod>2024-07-24T19:00:11+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-07-16T19:17:38+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2023-11-16T19:00:11+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/multiline-text/</loc>
     <lastmod>2023-11-16T19:00:11+03:00</lastmod>
