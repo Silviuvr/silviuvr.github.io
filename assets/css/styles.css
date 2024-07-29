@@ -4,9 +4,44 @@ code {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+.theme--dark body p > code {
+  background-color: rgba(65, 63, 63, 0.4); /* Semi-transparent dark background */
+  color: #fff;                          /* White text color for contrast */
+  padding: 0.3em 0.6em;                 /* Padding to add space around the text */
+  border-radius: 5px;                   /* Rounded corners */
+  font-family: monospace;               /* Monospace font for code */
+  font-size: 0.9em;                     /* Adjust font size if necessary */
+}
 
-.theme--dark .post__content .chroma  {
+.theme--light body p > code {
+  background-color: rgba(227, 226, 226, 0.5); /* Semi-transparent dark background */
+  color: #464646;                          /* White text color for contrast */
+  padding: 0.2em 0.4em;                 /* Padding to add space around the text */
+  border-radius: 5px;                   /* Rounded corners */
+  font-family: monospace;               /* Monospace font for code */
+  font-size: 0.9em;                     /* Adjust font size if necessary */
+}
+
+h1 {
+  text-align: center; /* Center-align the text */
+  margin: 0 auto; /* Center-align the element itself */
+  max-width: 80ch; /* Control the maximum width for better readability */
+  padding: 1rem 1rem 5rem 1rem; /* Add more bottom padding (2rem) */
+}
+
+.post:has(.post__content) {
+  display: grid;
+  grid-template-columns: 1fr min(70ch, 100%) 1fr; /* Center column with a max width */
+  gap: 1rem; /* Optional: gap between columns */
+}
+
+.post:has(.post__content) > * {
+  grid-column: 2; /* Center content in the middle column */
+}
+
+.theme--dark .post__content .chroma {
   background-color: #25262c;
+  border-bottom: none;
 }
 
 .theme--dark .code-header {
@@ -18,27 +53,27 @@ code {
 }
 
 .theme--dark .chroma .s {
-  color: #d56f63
+  color: #d56f63;
 }
 
 .theme--dark .bp {
-  color: #af7fe7
+  color: #af7fe7;
 }
 
 .theme--dark .kd {
-  color: #ff7ab2
+  color: #ff7ab2;
 }
 
-.theme--dark .nc  {
-  color: #4eb0cc
+.theme--dark .nc {
+  color: #4eb0cc;
 }
 
-.theme--dark .nf  {
-  color: #4eb0cc
+.theme--dark .nf {
+  color: #4eb0cc;
 }
 
-.theme--dark .c1  {
-  color: #878787
+.theme--dark .c1 {
+  color: #878787;
 }
 
 .code-header {
@@ -85,4 +120,42 @@ pre {
   background-color: #222; /* Dark background for the code block */
   color: #ccc; /* Light text color for code */
   border-radius: 0 0 8px 8px; /* Rounded bottom corners to match header */
+}
+
+
+.post-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure date is aligned to the right */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Make the image rounded */
+  margin-right: 1rem;
+}
+
+.post-info .author {
+  margin-right: auto; /* Push date to the end */
+  font-weight: bold;
+}
+
+.post-info .date {
+  margin-left: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500; /* Make the date bold */
+}
+
+.post-info .spacer {
+  flex-grow: 1; /* Take up remaining space to push date to the far right */
+}
+
+.post-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 1.5rem 0rem 5rem 0rem; /* Adjust spacing as needed */
 }
