@@ -18,7 +18,7 @@ We also have **`Label`** view, but it only allows us to position the image on th
 Text("Awww ") + Text(Image(systemName: "heart.fill"))
 ```
 
-<br>
+\
 {{< figure src="/images/articles/aw.jpg" caption= "Works really well for SFSymbols ">}}
 
 **But**...Not so well for **`assets Images`**
@@ -62,24 +62,26 @@ HStack {
 
 ```
 
-<br>
+\
 {{< figure src="/images/articles/inline2.jpg" caption= "The image doesn’t stay at the end of the text when dealing with multiline text!">}}
 <br>
 
 ## So, here’s my approach to this problem:
+
 I will declare some constants in order to avoid repetition:
 
 ```swift
 private var text = "This is a multi-line text. It has multiple lines. It has multiple lines. It has multiple lines. It has multiple lines. "
 private var image = "info" // Replace with your image name
 private let font: Font = .system(size: 17) // Same size as the image frame
-    
+
 var body: some View {
   Text(text)
     .font(font)
   + Text("\(getCustomImage())")
 }
 ```
+
 \
 We use the method with the `Text` initializer, but we adapt it.
 
@@ -103,14 +105,14 @@ private func getCustomImage(color: Color = .gray, newSize: CGSize = CGSize(width
 
 This function does the following:
 
->1. It makes sure to safely unwrap the image.
->2. Calls a function that will convert our image to a desired frame.
->3. Returns a `Text` with the `Image` initializer.
->4. Sets the rendering mode to .template in order to be able to change the `foregroundColor` of the image.
->5. Adjust the `baselineOffset` by setting it to a negative value to center the icon within the text.
-<br>
+> 1.  It makes sure to safely unwrap the image.
+> 2.  Calls a function that will convert our image to a desired frame.
+> 3.  Returns a `Text` with the `Image` initializer.
+> 4.  Sets the rendering mode to .template in order to be able to change the `foregroundColor` of the image.
+> 5.  Adjust the `baselineOffset` by setting it to a negative value to center the icon within the text.
+>     <br>
 
-#### ***Ensure that the font you choose for the text closely matches or is the same as the image frame.***
+#### **_Ensure that the font you choose for the text closely matches or is the same as the image frame._**
 
 And last but not least here’s the `convertImageToNewFrame()` function:
 
@@ -123,6 +125,7 @@ func convertImageToNewFrame(image: UIImage, newFrameSize: CGSize) -> UIImage? {
 }
 
 ```
+
 <br>
 
 For easier readability, here’s the complete code for the SwiftUI view (iOS 17):
@@ -132,13 +135,13 @@ struct InlineView: View {
     private var text = "This is a multi-line text. It has multiple lines. It has multiple lines. It has multiple lines. It has multiple lines. "
     private var image = "info" // Replace with your image name
     private let font: Font = .system(size: 17)
-    
+
     var body: some View {
         Text(text)
             .font(font)
         + Text("\(getCustomImage())")
     }
-    
+
     private func getCustomImage(color: Color = .gray, newSize: CGSize = CGSize(width: 17, height: 17)) -> Text {
         if let image = UIImage(named: image),
            let newImage = convertImageToNewFrame(image: image, newFrameSize: newSize) {
@@ -148,11 +151,11 @@ struct InlineView: View {
             )
             .baselineOffset(-1.5)
             .foregroundStyle(color)
-            
+
         }
         return Text(Image(systemName: "heart.fill"))
     }
-    
+
     func convertImageToNewFrame(image: UIImage, newFrameSize: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(newFrameSize, false, 0.0)
         image.draw(in: CGRect(origin: .zero, size: newFrameSize))
@@ -167,7 +170,8 @@ struct InlineView: View {
 }
 
 
-``` 
+```
+
 <br>
 
 ## `Thanks for stopping by! 😸`

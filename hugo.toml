@@ -12,6 +12,7 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 
 [params]
+hidesidebar = true
 googleSiteVerify = "Q4oxgBC4BdG-kp2tG9zWZ7HQ0TGNbjNUrzIDWFeRhP4"
 title = 'Silviu Vranau'
 author = "Silviu Vranau"
@@ -24,8 +25,11 @@ copyright = "Silviu Vranau, 2019-{{ YEAR }}"
 doNotLoadAnimations = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
 customCss = ["css/styles.css"]
-customJs = ["js/custom.js"]
+customJs = ["js/custom.js", "js/addAuthorData.js"]
 favicon = "favicons/"
+singleDateFormat = "Jan 2, 2006"
+indexDateFormat = "Jan 2, 2006"
+listDateFormat = "Jan 2, 2006"
 
 
 [menu]

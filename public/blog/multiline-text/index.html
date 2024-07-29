@@ -51,8 +51,8 @@
     
     <link
       rel="stylesheet"
-      href="/css/styles.min.73bb80207b054168cc6e29ee8984885beffba7a77e6e03e89a0cb22d0268bfc7.css"
-      integrity="sha256-c7uAIHsFQWjMbinuiYSIW&#43;/7p6d&#43;bgPomgyyLQJov8c="
+      href="/css/styles.min.5513f76ba2f123e596b63c930384f2125743a1d1675310bfff3faf265b6cbe0b.css"
+      integrity="sha256-VRP3a6LxI&#43;WWtjyTA4TyEldDodFnUxC//z&#43;vJltsvgs="
       crossorigin="anonymous"
       media="screen"
     />
@@ -119,8 +119,8 @@
     ></script>
   <script
       type="text/javascript"
-      src="/js/custom.min.8c6855da72e39e1d50bbec6b916839c22a7433630756dac6fd9fc3b029aa3d5d.js"
-      integrity="sha256-jGhV2nLjnh1Qu&#43;xrkWg5wip0M2MHVtrG/Z/DsCmqPV0="
+      src="/js/custom.min.8a3bc78efc6a48a8590ec3b0ea2121452e9771642252cf054eeea9708e6043c8.js"
+      integrity="sha256-ijvHjvxqSKhZDsOw6iEhRS6XcWQiUs8FTu6pcI5gQ8g="
       crossorigin="anonymous"
     ></script>
 
@@ -228,7 +228,7 @@ The problem I haven’t been able to resolve is how to display an asset image al
     <div class="wrapper">
       <aside
         
-          class="wrapper__sidebar"
+          class="wrapper__sidebar wrapper__sidebar--hidden"
         
       ><div
   class="sidebar
@@ -311,7 +311,7 @@ The problem I haven’t been able to resolve is how to display an asset image al
 </aside>
       <main
         
-          class="wrapper__main"
+          class="wrapper__main wrapper__main--fullscreen"
         
       >
         <header class="header"><div
@@ -455,13 +455,13 @@ While SwiftUI handles inline images with text for SFSymbols, I’ve struggled to
 <br>
 We also have <strong><code>Label</code></strong> view, but it only allows us to position the image on the left side of the text, which is not our current requirement.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="n">Text</span><span class="p">(</span><span class="s">&#34;Awww &#34;</span><span class="p">)</span> <span class="o">+</span> <span class="n">Text</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">systemName</span><span class="p">:</span> <span class="s">&#34;heart.fill&#34;</span><span class="p">))</span>
-</span></span></code></pre></div><br>
+</span></span></code></pre></div><p><br>
 <figure><img src="/images/articles/aw.jpg"
     alt="Works really well for SFSymbols"><figcaption>
       <p>Works really well for SFSymbols</p>
     </figcaption>
 </figure>
-
+</p>
 <p><strong>But</strong>&hellip;Not so well for <strong><code>assets Images</code></strong>
 <br>
 <br>
@@ -498,20 +498,20 @@ We also have <strong><code>Label</code></strong> view, but it only allows us to 
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">scaledToFit</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><br>
+</span></span></code></pre></div><p><br>
 <figure><img src="/images/articles/inline2.jpg"
     alt="The image doesn’t stay at the end of the text when dealing with multiline text!"><figcaption>
       <p>The image doesn’t stay at the end of the text when dealing with multiline text!</p>
     </figcaption>
 </figure>
 
-<br>
+<br></p>
 <h2 id="so-heres-my-approach-to-this-problem">So, here’s my approach to this problem:</h2>
 <p>I will declare some constants in order to avoid repetition:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">var</span> <span class="nv">text</span> <span class="p">=</span> <span class="s">&#34;This is a multi-line text. It has multiple lines. It has multiple lines. It has multiple lines. It has multiple lines. &#34;</span>
 </span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">var</span> <span class="nv">image</span> <span class="p">=</span> <span class="s">&#34;info&#34;</span> <span class="c1">// Replace with your image name</span>
 </span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">let</span> <span class="nv">font</span><span class="p">:</span> <span class="n">Font</span> <span class="p">=</span> <span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mi">17</span><span class="p">)</span> <span class="c1">// Same size as the image frame</span>
-</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">Text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">font</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
@@ -543,7 +543,7 @@ We use the method with the <code>Text</code> initializer, but we adapt it.</p>
 <br></li>
 </ol>
 </blockquote>
-<h4 id="ensure-that-the-font-you-choose-for-the-text-closely-matches-or-is-the-same-as-the-image-frame"><em><strong>Ensure that the font you choose for the text closely matches or is the same as the image frame.</strong></em></h4>
+<h4 id="_ensure-that-the-font-you-choose-for-the-text-closely-matches-or-is-the-same-as-the-image-frame_"><strong><em>Ensure that the font you choose for the text closely matches or is the same as the image frame.</em></strong></h4>
 <p>And last but not least here’s the <code>convertImageToNewFrame()</code> function:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">convertImageToNewFrame</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">UIImage</span><span class="p">,</span> <span class="n">newFrameSize</span><span class="p">:</span> <span class="n">CGSize</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">UIImage</span><span class="p">?</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">UIGraphicsBeginImageContextWithOptions</span><span class="p">(</span><span class="n">newFrameSize</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
@@ -557,13 +557,13 @@ We use the method with the <code>Text</code> initializer, but we adapt it.</p>
 </span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">text</span> <span class="p">=</span> <span class="s">&#34;This is a multi-line text. It has multiple lines. It has multiple lines. It has multiple lines. It has multiple lines. &#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">image</span> <span class="p">=</span> <span class="s">&#34;info&#34;</span> <span class="c1">// Replace with your image name</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">font</span><span class="p">:</span> <span class="n">Font</span> <span class="p">=</span> <span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mi">17</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">Text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">font</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="o">+</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">getCustomImage</span><span class="si">())</span><span class="s">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">getCustomImage</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="n">Color</span> <span class="p">=</span> <span class="p">.</span><span class="n">gray</span><span class="p">,</span> <span class="n">newSize</span><span class="p">:</span> <span class="n">CGSize</span> <span class="p">=</span> <span class="n">CGSize</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">17</span><span class="p">))</span> <span class="p">-&gt;</span> <span class="n">Text</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kd">let</span> <span class="nv">image</span> <span class="p">=</span> <span class="n">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="n">image</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">           <span class="kd">let</span> <span class="nv">newImage</span> <span class="p">=</span> <span class="n">convertImageToNewFrame</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">image</span><span class="p">,</span> <span class="n">newFrameSize</span><span class="p">:</span> <span class="n">newSize</span><span class="p">)</span> <span class="p">{</span>
@@ -573,11 +573,11 @@ We use the method with the <code>Text</code> initializer, but we adapt it.</p>
 </span></span><span class="line"><span class="cl">            <span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">baselineOffset</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">foregroundStyle</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">Text</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">systemName</span><span class="p">:</span> <span class="s">&#34;heart.fill&#34;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">convertImageToNewFrame</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">UIImage</span><span class="p">,</span> <span class="n">newFrameSize</span><span class="p">:</span> <span class="n">CGSize</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">UIImage</span><span class="p">?</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">UIGraphicsBeginImageContextWithOptions</span><span class="p">(</span><span class="n">newFrameSize</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">image</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="n">CGRect</span><span class="p">(</span><span class="n">origin</span><span class="p">:</span> <span class="p">.</span><span class="n">zero</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">newFrameSize</span><span class="p">))</span>

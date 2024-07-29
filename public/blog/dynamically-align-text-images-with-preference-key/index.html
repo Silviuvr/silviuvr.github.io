@@ -51,8 +51,8 @@
     
     <link
       rel="stylesheet"
-      href="/css/styles.min.73bb80207b054168cc6e29ee8984885beffba7a77e6e03e89a0cb22d0268bfc7.css"
-      integrity="sha256-c7uAIHsFQWjMbinuiYSIW&#43;/7p6d&#43;bgPomgyyLQJov8c="
+      href="/css/styles.min.5513f76ba2f123e596b63c930384f2125743a1d1675310bfff3faf265b6cbe0b.css"
+      integrity="sha256-VRP3a6LxI&#43;WWtjyTA4TyEldDodFnUxC//z&#43;vJltsvgs="
       crossorigin="anonymous"
       media="screen"
     />
@@ -119,8 +119,8 @@
     ></script>
   <script
       type="text/javascript"
-      src="/js/custom.min.8c6855da72e39e1d50bbec6b916839c22a7433630756dac6fd9fc3b029aa3d5d.js"
-      integrity="sha256-jGhV2nLjnh1Qu&#43;xrkWg5wip0M2MHVtrG/Z/DsCmqPV0="
+      src="/js/custom.min.8a3bc78efc6a48a8590ec3b0ea2121452e9771642252cf054eeea9708e6043c8.js"
+      integrity="sha256-ijvHjvxqSKhZDsOw6iEhRS6XcWQiUs8FTu6pcI5gQ8g="
       crossorigin="anonymous"
     ></script>
 
@@ -133,7 +133,7 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Horizontally Align Images with Dynamic Text Views in a VStack in SwiftUI 🚧 ">
-  <meta name="twitter:description" content="The Problem 😓: I encountered an unusual situation where I needed to place an Image next to my Text.">
+  <meta name="twitter:description" content="The Problem 😓: I encountered this situation where I needed to place an Image next to my Text.">
 
 
 
@@ -141,12 +141,12 @@
   <meta property="og:url" content="http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/">
   <meta property="og:site_name" content="Silviu Vranau">
   <meta property="og:title" content="Horizontally Align Images with Dynamic Text Views in a VStack in SwiftUI 🚧 ">
-  <meta property="og:description" content="The Problem 😓: I encountered an unusual situation where I needed to place an Image next to my Text.">
+  <meta property="og:description" content="The Problem 😓: I encountered this situation where I needed to place an Image next to my Text.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2024-07-24T19:00:11+03:00">
-    <meta property="article:modified_time" content="2024-07-24T19:00:11+03:00">
+    <meta property="article:published_time" content="2024-07-29T17:00:11+03:00">
+    <meta property="article:modified_time" content="2024-07-29T17:00:11+03:00">
 
 
 
@@ -164,7 +164,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        The Problem 😓: I encountered an unusual situation where I needed to place an Image next to my Text.
+        The Problem 😓: I encountered this situation where I needed to place an Image next to my Text.
 
 
       
@@ -194,9 +194,9 @@
             "name": "Silviu Vranau"
         },
         "copyrightYear" : "2024",
-        "dateCreated": "2024-07-24T19:00:11.00Z",
-        "datePublished": "2024-07-24T19:00:11.00Z",
-        "dateModified": "2024-07-24T19:00:11.00Z",
+        "dateCreated": "2024-07-29T17:00:11.00Z",
+        "datePublished": "2024-07-29T17:00:11.00Z",
+        "dateModified": "2024-07-29T17:00:11.00Z",
         "publisher":{
             "@type":"Organization",
             "name": "Silviu Vranau",
@@ -214,7 +214,7 @@
 
     ,
         "url" : "http:\/\/localhost:1313\/blog\/dynamically-align-text-images-with-preference-key\/",
-        "wordCount" : "104",
+        "wordCount" : "445",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -226,7 +226,7 @@
     <div class="wrapper">
       <aside
         
-          class="wrapper__sidebar"
+          class="wrapper__sidebar wrapper__sidebar--hidden"
         
       ><div
   class="sidebar
@@ -309,7 +309,7 @@
 </aside>
       <main
         
-          class="wrapper__main"
+          class="wrapper__main wrapper__main--fullscreen"
         
       >
         <header class="header"><div
@@ -440,10 +440,10 @@
     
     <div class="post__content">
       <h1>Horizontally Align Images With Dynamic Text Views in a VStack in SwiftUI 🚧 </h1>
-      <h1 id="the-problem-">The Problem 😓:</h1>
-<p>I encountered an unusual situation where I needed to place an <code>Image</code> next to my <code>Text</code>.
-However, the image had to be horizontally aligned with another image below, which was positioned in a different horizontal stack <code>HStack</code>.<br><br></p>
-<h2>Check out these two scenarios:</h2><br>
+      <h2 id="the-problem-">The Problem 😓:</h2>
+<p>I encountered this situation where I needed to place an <code>Image</code> next to my <code>Text</code>.<br>
+However, the image had to be horizontally aligned with another image below, which was positioned in a different <code>HStack</code>.<br><br></p>
+<h3>Check out these two scenarios:</h3><br>
 <figure><img src="/images/articles/badAlign.gif"
     alt="The heart images are not horizontally aligned!"><figcaption>
       <p>The heart images are not horizontally aligned!</p>
@@ -479,7 +479,118 @@ However, the image had to be horizontally aligned with another image below, whic
 </span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">background</span><span class="p">(.</span><span class="n">orange</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">padding</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></div>
+</span></span></code></pre></div><br>
+<p>But this is what I want to achieve: have the images aligned even if they are part of different HStack views.</p>
+<p><figure><img src="/images/articles/goodAlign.gif"
+    alt="Aligned no matter the length!"><figcaption>
+      <p>Aligned no matter the length!</p>
+    </figcaption>
+</figure>
+
+<br></p>
+<h3>Let us go through the solution step by step:</h3>
+<p>First, we need to define a custom <code>PreferenceKey</code> that calculates the maximum width value based on the provided inputs:
+<br></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">MaxWidthPreferenceKey</span><span class="p">:</span> <span class="n">PreferenceKey</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">defaultValue</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reduce</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">value</span><span class="p">:</span> <span class="kr">inout</span> <span class="n">CGFloat</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nextValue</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="n">CGFloat</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">value</span> <span class="p">=</span> <span class="bp">max</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">nextValue</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<p>After that, I like to create an extension on <code>View</code> to avoid boilerplate code. This allows us to use <code>trackWidth</code> on any view we want by simply applying the modifier. This approach utilizes <code>GeometryReader</code> inside a background modifier so that we do not mess with the native SwiftUI alignment.<br></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">trackMaxWidth</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">background</span><span class="p">(</span><span class="n">GeometryReader</span> <span class="p">{</span> <span class="n">geometry</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Color</span><span class="p">.</span><span class="n">clear</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">preference</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">MaxWidthPreferenceKey</span><span class="p">.</span><span class="kc">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">geometry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<p>Then we add a <code>State</code> variable to dynamically adapt the width based on text length.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">maxWidth</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">?</span>
+</span></span></code></pre></div><br>
+<p>And lastly we need a way to intercept those geometry reader changes:<br></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="p">.</span><span class="n">onPreferenceChange</span><span class="p">(</span><span class="n">MaxWidthPreferenceKey</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">maxWidth</span> <span class="p">=</span> <span class="nv">$0</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<p>I&rsquo;ll include the full code below for easier review:<br></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">maxWidth</span><span class="p">:</span> <span class="n">CGFloat</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">longText</span> <span class="p">=</span> <span class="s">&#34;looooooongtextttttt&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">shortText</span> <span class="p">=</span> <span class="s">&#34;short&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">VStack</span><span class="p">(</span><span class="n">spacing</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Group</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">HStack</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">labelView</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="n">longText</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Spacer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;10&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">Divider</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">Group</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">HStack</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">labelView</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="n">shortText</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Spacer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Text</span><span class="p">(</span><span class="s">&#34;100&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">onPreferenceChange</span><span class="p">(</span><span class="n">MaxWidthPreferenceKey</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">maxWidth</span> <span class="p">=</span> <span class="nv">$0</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">padding</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">background</span><span class="p">(.</span><span class="n">orange</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">padding</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">labelView</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">HStack</span><span class="p">(</span><span class="n">spacing</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="p">.</span><span class="n">regular</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">trackMaxWidth</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="n">maxWidth</span><span class="p">,</span> <span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">leading</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">background</span><span class="p">(.</span><span class="n">green</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Image</span><span class="p">(</span><span class="n">systemName</span><span class="p">:</span> <span class="s">&#34;heart&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">font</span><span class="p">(.</span><span class="n">system</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="p">.</span><span class="n">light</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">background</span><span class="p">(.</span><span class="n">yellow</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">MaxWidthPreferenceKey</span><span class="p">:</span> <span class="n">PreferenceKey</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">defaultValue</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reduce</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">value</span><span class="p">:</span> <span class="kr">inout</span> <span class="n">CGFloat</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nextValue</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="n">CGFloat</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">value</span> <span class="p">=</span> <span class="bp">max</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">nextValue</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">trackMaxWidth</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">background</span><span class="p">(</span><span class="n">GeometryReader</span> <span class="p">{</span> <span class="n">geometry</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Color</span><span class="p">.</span><span class="n">clear</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">preference</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">MaxWidthPreferenceKey</span><span class="p">.</span><span class="kc">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">geometry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><br>
+<br>
+<h2 id="thanks-for-stopping-by-">Thanks for stopping by! 🪴</h2>
+</div>
     <div class="post__footer">
       
 
