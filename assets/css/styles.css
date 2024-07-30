@@ -4,22 +4,99 @@ code {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+.theme--dark .archive__list-item {
+  border-bottom: 1px solid #5d5d5d;
+  padding-bottom: 20px;
+}
+
+.theme--light .archive__list-item {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+.theme--dark .nav__list {
+  background-color: #1b4242;
+}
+
+.theme--light .nav__list {
+  background-color: #9ec8b9;
+}
+
+.theme--dark header.header {
+  background-color: #1b4242;
+}
+
+.theme--light header.header {
+  background-color: #9ec8b9;
+}
+
+.theme--dark .portfolio__description {
+  background-color: hsl(159, 13%, 43%);
+}
+
+.theme--dark .portfolio__button {
+  color: #092635;
+}
+
+.theme--dark .form-style ul li {
+  background-color: #1b4242;
+}
+
+.theme--dark .form-style ul li .field-style {
+  border: 1px solid rgb(156, 155, 155);
+  background-color: #1b4242;
+}
+
+.theme--light .form-style ul li {
+  background-color: #9ec8b9;
+}
+
+.theme--light .form-style ul li .field-style {
+  background-color: #9ec8b9;
+}
+
+.theme--dark .body {
+  background-color: #1b4242;
+}
+
+.theme--dark .post {
+  background-color: #1b4242;
+}
+
+.theme--light .body {
+  background-color: #9ec8b9;
+}
+
+.theme--light .post {
+  background-color: #9ec8b9;
+}
+
 .theme--dark body p > code {
-  background-color: rgba(65, 63, 63, 0.4); /* Semi-transparent dark background */
-  color: #fff;                          /* White text color for contrast */
-  padding: 0.3em 0.6em;                 /* Padding to add space around the text */
-  border-radius: 5px;                   /* Rounded corners */
-  font-family: monospace;               /* Monospace font for code */
-  font-size: 0.9em;                     /* Adjust font size if necessary */
+  background-color: rgba(
+    65,
+    63,
+    63,
+    0.4
+  ); /* Semi-transparent dark background */
+  color: #fff; /* White text color for contrast */
+  padding: 0.3em 0.6em; /* Padding to add space around the text */
+  border-radius: 5px; /* Rounded corners */
+  font-family: monospace; /* Monospace font for code */
+  font-size: 0.9em; /* Adjust font size if necessary */
 }
 
 .theme--light body p > code {
-  background-color: rgba(227, 226, 226, 0.5); /* Semi-transparent dark background */
-  color: #464646;                          /* White text color for contrast */
-  padding: 0.2em 0.4em;                 /* Padding to add space around the text */
-  border-radius: 5px;                   /* Rounded corners */
-  font-family: monospace;               /* Monospace font for code */
-  font-size: 0.9em;                     /* Adjust font size if necessary */
+  background-color: rgba(
+    227,
+    226,
+    226,
+    0.5
+  ); /* Semi-transparent dark background */
+  color: #464646; /* White text color for contrast */
+  padding: 0.2em 0.4em; /* Padding to add space around the text */
+  border-radius: 5px; /* Rounded corners */
+  font-family: monospace; /* Monospace font for code */
+  font-size: 0.9em; /* Adjust font size if necessary */
 }
 
 h1 {
@@ -122,7 +199,6 @@ pre {
   border-radius: 0 0 8px 8px; /* Rounded bottom corners to match header */
 }
 
-
 .post-info {
   display: flex;
   align-items: center;
@@ -145,7 +221,7 @@ pre {
 
 .post-info .date {
   margin-left: auto;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 500; /* Make the date bold */
 }
 
@@ -156,6 +232,6 @@ pre {
 .post-divider {
   border: 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
   margin: 1.5rem 0rem 5rem 0rem; /* Adjust spacing as needed */
 }
