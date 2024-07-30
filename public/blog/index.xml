@@ -14,7 +14,8 @@
       
       <guid>http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/</guid>
       
-        <description>The Problem 😓: I encountered this situation where I needed to place an Image next to my Text.</description>
+        <description>The Problem 😓: I encountered this situation where I needed to place an Image next to my Text.
+However, the image had to be horizontally aligned with another image below, which was positioned in a different HStack.</description>
       
     </item>
     
@@ -26,7 +27,7 @@
       <guid>http://localhost:1313/blog/multiline-text/</guid>
       
         <description>. . .
-The problem I haven’t been able to resolve is how to display an asset image alongside text on its right side.</description>
+The problem I haven’t been able to resolve is how to display an asset image alongside text on its right side. &amp;#x1f614; While SwiftUI handles inline images with text for SFSymbols, I’ve struggled to find a solution that allows an asset image size to dynamically adjust to the text.</description>
       
     </item>
     
@@ -37,7 +38,8 @@ The problem I haven’t been able to resolve is how to display an asset image al
       
       <guid>http://localhost:1313/blog/screenshot-in-swiftui/</guid>
       
-        <description>Capturing a long screenshot of a ScrollView in SwiftUI can be challenging, but it&amp;rsquo;s quite feasible with the right approach.</description>
+        <description>Capturing a long screenshot of a ScrollView in SwiftUI can be challenging, but it&amp;rsquo;s quite feasible with the right approach.
+In our case, capturing a screenshot of a scroll view that extends beyond the visible area of the screen requires several steps.</description>
       
     </item>
     
