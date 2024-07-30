@@ -242,7 +242,6 @@ pre {
   margin: 1.5rem 0rem 5rem 0rem; /* Adjust spacing as needed */
 }
 
-
 .post__content > figure img {
   border-radius: 15px; /* Adjust the radius as needed */
   overflow: hidden; /* Ensures the content respects the rounded corners */
