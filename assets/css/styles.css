@@ -119,6 +119,12 @@ h1 {
 .theme--dark .post__content .chroma {
   background-color: #25262c;
   border-bottom: none;
+  border-radius: 0 0 30px 8px;
+}
+
+.theme--light .post__content .chroma {
+  border-bottom: none;
+  border-radius: 0 0 30px 8px;
 }
 
 .theme--dark .code-header {
@@ -164,7 +170,7 @@ h1 {
   padding: 7px 15px 8px 10px;
   font-weight: bold;
   text-align: center;
-  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  border-radius: 30px 8px 0 0; /* Rounded top corners */
   margin: 0;
   margin-bottom: -1px; /* Remove space between header and code block */
 }
@@ -234,4 +240,10 @@ pre {
   height: 1px;
   background: rgba(255, 255, 255, 0.3);
   margin: 1.5rem 0rem 5rem 0rem; /* Adjust spacing as needed */
+}
+
+.post__content > figure img {
+  border-radius: 15px; /* Adjust the radius as needed */
+  overflow: hidden; /* Ensures the content respects the rounded corners */
+  height: auto;
 }
