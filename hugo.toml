@@ -12,6 +12,7 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 
 [params]
+displayMode = "dark"
 hidesidebar = true
 googleSiteVerify = "z-S3aK4YIIl9Cd2RHsYrPlW_NMamTSGWoI67f4MO2FQ"
 title = 'Silviu Vranau'
