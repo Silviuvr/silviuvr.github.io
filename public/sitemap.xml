@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://svpdigitalstudio.com/</loc>
     <lastmod>2024-07-29T17:00:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://svpdigitalstudio.com/blog/</loc>
     <lastmod>2024-07-29T17:00:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/</loc>
+    <loc>https://svpdigitalstudio.com/blog/dynamically-align-text-images-with-preference-key/</loc>
     <lastmod>2024-07-29T17:00:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://svpdigitalstudio.com/about/</loc>
     <lastmod>2024-07-16T19:17:38+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/multiline-text/</loc>
+    <loc>https://svpdigitalstudio.com/blog/multiline-text/</loc>
     <lastmod>2023-11-16T19:00:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/screenshot-in-swiftui/</loc>
+    <loc>https://svpdigitalstudio.com/blog/screenshot-in-swiftui/</loc>
     <lastmod>2023-10-11T19:00:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/my-first-blog/</loc>
+    <loc>https://svpdigitalstudio.com/blog/my-first-blog/</loc>
     <lastmod>2019-07-16T19:00:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://svpdigitalstudio.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/reviews/</loc>
+    <loc>https://svpdigitalstudio.com/reviews/</loc>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://svpdigitalstudio.com/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/</loc>
+    <loc>https://svpdigitalstudio.com/portfolio/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://svpdigitalstudio.com/tags/</loc>
   </url>
 </urlset>

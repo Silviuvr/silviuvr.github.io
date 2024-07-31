@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on </title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://svpdigitalstudio.com/blog/</link>
     <description>Recent content in Blogs on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jul 2024 17:00:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Jul 2024 17:00:11 +0300</lastBuildDate><atom:link href="https://svpdigitalstudio.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Horizontally Align Images with Dynamic Text Views in a VStack in SwiftUI 🚧 </title>
-      <link>http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/</link>
+      <link>https://svpdigitalstudio.com/blog/dynamically-align-text-images-with-preference-key/</link>
       <pubDate>Mon, 29 Jul 2024 17:00:11 +0300</pubDate>
       
-      <guid>http://localhost:1313/blog/dynamically-align-text-images-with-preference-key/</guid>
+      <guid>https://svpdigitalstudio.com/blog/dynamically-align-text-images-with-preference-key/</guid>
       
         <description>The Problem 😓: I encountered this situation where I needed to place an Image next to my Text.
 However, the image had to be horizontally aligned with another image below, which was positioned in a different HStack.</description>
@@ -21,10 +21,10 @@ However, the image had to be horizontally aligned with another image below, whic
     
     <item>
       <title>SwiftUI Multiline Text with an INLINE image at the end</title>
-      <link>http://localhost:1313/blog/multiline-text/</link>
+      <link>https://svpdigitalstudio.com/blog/multiline-text/</link>
       <pubDate>Thu, 16 Nov 2023 19:00:11 +0300</pubDate>
       
-      <guid>http://localhost:1313/blog/multiline-text/</guid>
+      <guid>https://svpdigitalstudio.com/blog/multiline-text/</guid>
       
         <description>. . .
 The problem I haven’t been able to resolve is how to display an asset image alongside text on its right side. &amp;#x1f614; While SwiftUI handles inline images with text for SFSymbols, I’ve struggled to find a solution that allows an asset image size to dynamically adjust to the text.</description>
@@ -33,10 +33,10 @@ The problem I haven’t been able to resolve is how to display an asset image al
     
     <item>
       <title>How to take a screenshot/snapshot of a Scroll View in SwiftUI.</title>
-      <link>http://localhost:1313/blog/screenshot-in-swiftui/</link>
+      <link>https://svpdigitalstudio.com/blog/screenshot-in-swiftui/</link>
       <pubDate>Wed, 11 Oct 2023 19:00:11 +0300</pubDate>
       
-      <guid>http://localhost:1313/blog/screenshot-in-swiftui/</guid>
+      <guid>https://svpdigitalstudio.com/blog/screenshot-in-swiftui/</guid>
       
         <description>Capturing a long screenshot of a ScrollView in SwiftUI can be challenging, but it&amp;rsquo;s quite feasible with the right approach.
 In our case, capturing a screenshot of a scroll view that extends beyond the visible area of the screen requires several steps.</description>
@@ -45,10 +45,10 @@ In our case, capturing a screenshot of a scroll view that extends beyond the vis
     
     <item>
       <title>My First Blog</title>
-      <link>http://localhost:1313/blog/my-first-blog/</link>
+      <link>https://svpdigitalstudio.com/blog/my-first-blog/</link>
       <pubDate>Tue, 16 Jul 2019 19:00:11 +0300</pubDate>
       
-      <guid>http://localhost:1313/blog/my-first-blog/</guid>
+      <guid>https://svpdigitalstudio.com/blog/my-first-blog/</guid>
       
         <description>Hello world! &amp;#x1f30d;</description>
       
