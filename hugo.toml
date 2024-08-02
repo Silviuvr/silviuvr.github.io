@@ -12,17 +12,19 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 
 [params]
+reversepagetitle = true
+enableMediumZoom = false
 displayMode = "dark"
 hidesidebar = true
 googleSiteVerify = "z-S3aK4YIIl9Cd2RHsYrPlW_NMamTSGWoI67f4MO2FQ"
 title = 'Silviu Vranau'
-author = "Silviu Vranau"
+author = "SVPDigitalStudio"
 description = "iOS Developer | SwiftUI | Swift | Freelancer"
 profilePicture = "images/profileImage.jpeg"
 mainSections = ["blog"]
 readMore = true
 contentratio = 0.75
-copyright = "Silviu Vranau, 2019-{{ YEAR }}"
+copyright = "SVPDigitalStudio, 2019-{{ YEAR }}"
 doNotLoadAnimations = true
 contactFormAction = "https://formspree.io/f/mblrdjlw"
 customCss = ["css/styles.css"]
